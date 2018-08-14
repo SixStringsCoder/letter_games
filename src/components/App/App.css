@@ -1,0 +1,32 @@
+#appContainer {
+  max-width: 100vw;
+  display: grid;
+  grid-template: 10% 80% 10% / repeat(3, 1fr);
+  grid-template-areas:
+  "header header header"
+  "main main main"
+  "footer footer footer";
+}
+
+
+
+/*========================
+--------------------------
+      MEDIA QUERIES
+--------------------------
+=========================*/
+
+/* Tablets - target is Portrait mode */
+@media screen and (min-width: 47.9375rem) {
+
+}
+
+@media screen and (min-width: 63.9375rem) {
+
+}
+
+
+/* Desktops */
+@media screen and (min-width: 75rem) {
+
+}

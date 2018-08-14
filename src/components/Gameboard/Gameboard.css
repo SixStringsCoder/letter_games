@@ -1,0 +1,21 @@
+main {
+  grid-area: main;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-template-areas:
+  "board board board"
+  "board board board"
+  "board board board";
+  width: 100vw;
+}
+
+#gameboard {
+  grid-area: board;
+  width: 100%;
+  /* min-height: 59vh; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  /* background-color: #ddd; */
+}

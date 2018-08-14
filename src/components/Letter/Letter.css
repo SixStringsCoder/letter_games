@@ -1,0 +1,21 @@
+.button {
+  border: 1px solid #FF7D00;
+  border-radius: 100%;
+  margin: 3vw 2vw;
+  width: 12vw;
+  height: 12vw;
+  padding: 18px 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:active {
+  color: white;
+  background-color: black;
+}
+
+p {
+  font-family: 'Short Stack', cursive;
+  font-size: 12vw;
+}
