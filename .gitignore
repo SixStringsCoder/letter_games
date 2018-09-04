@@ -22,3 +22,5 @@ yarn-error.log*
 
 /static_site_sketch
 /audio
+*.m4a
+*.mp3
