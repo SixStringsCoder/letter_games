@@ -8,20 +8,19 @@ const content = {
   letters: [ "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
   vowels: ["a", "e", "i", "o", "u"]
 };
-const letter_a = new Audio(require("./audio/a_sound.m4a"));
+
 
 class Letter extends Component {
   state = {
-    letter: ''
+    letter_state: '',
   }
 
   playAudio = (event) => {
-    let letter = event.target.id;
-    letter_a.crossOrigin = "anonymous";
-    letter_a.play();
-
+    let letter_clicked = event.target.id;
+    let letter_audio = new Audio(require(`./audio/${letter_clicked}_sound.m4a`));
+    letter_audio.play();
     this.setState({
-      letter: letter,
+      letter_state: letter_clicked,
     });
   }
 
