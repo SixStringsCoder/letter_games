@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './Gameboard.css';
-import Letter from '../Letter/Letter';
+import GamePicker from '../GamePicker/GamePicker';
+
 
 class Gameboard extends Component {
   render() {
     return (
         <main>
           <section id="gameboard">
-            <Letter />
+            <GamePicker />
           </section>
         </main>
     );
