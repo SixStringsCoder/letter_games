@@ -6,16 +6,14 @@ main {
   "board board board"
   "board board board"
   "board board board";
-  width: 100vw;
+  min-width: 100vw;
 }
 
 #gameboard {
   grid-area: board;
-  width: 100%;
-  /* min-height: 59vh; */
+  min-width: 100vw;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-around;
-
-  /* background-color: #ddd; */
 }

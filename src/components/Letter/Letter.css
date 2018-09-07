@@ -15,7 +15,10 @@
   background-color: black;
 }
 
-p {
+a {
   font-family: 'Short Stack', cursive;
   font-size: 12vw;
+  text-align: center;
+  min-width: 100%;
+  padding: 18px 18px;
 }

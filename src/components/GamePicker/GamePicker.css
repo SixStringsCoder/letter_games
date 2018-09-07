@@ -1,21 +1,21 @@
-main {
-  grid-area: main;
-  display: grid;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
-  grid-template-areas:
-  "board board board"
-  "board board board"
-  "board board board";
+#gamepicker {
   width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#gameboard {
-  grid-area: board;
-  width: 100%;
-  /* min-height: 59vh; */
+#menu-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
+}
 
-  /* background-color: #ddd; */
+label {
+  margin: 0
+}
+#menu {
+  margin: 5px;
+  border: 1px solid black;
 }

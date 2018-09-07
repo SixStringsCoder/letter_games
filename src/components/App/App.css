@@ -1,7 +1,8 @@
 #appContainer {
   max-width: 100vw;
+  height: 100vh;
   display: grid;
-  grid-template: 10% 80% 10% / repeat(3, 1fr);
+  grid-template: 10vh 75vh 10vh / repeat(3, 1fr);
   grid-template-areas:
   "header header header"
   "main main main"
