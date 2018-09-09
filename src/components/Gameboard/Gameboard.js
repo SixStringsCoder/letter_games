@@ -16,15 +16,14 @@ const CONTENT = {
 
 
 class Gameboard extends Component {
-constructor(props) {
-  super(props);
-  this.state = {
-    content: CONTENT.blends
+  constructor(props) {
+    super(props);
+    this.state = {
+      content: CONTENT.letters
+    }
   }
-  this.chooseContent = this.chooseContent.bind(this);
-}
 
-  chooseContent(newContent) {
+  chooseContent = (newContent) => {
     this.setState({
       content: CONTENT[newContent]
     })

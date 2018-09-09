@@ -2,21 +2,11 @@ import React, { Component } from 'react';
 import './Letter.css';
 
 class Letter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      letter_state: '',
-    }
-    this.playAudio = this.playAudio.bind(this);
- }
 
-  playAudio(event) {
-    let letter_clicked = event.target.id;
-    let letter_audio = new Audio(require(`./audio/${letter_clicked}_sound.m4a`));
+  playAudio = (event) => {
+    let letter = event.target.id;
+    let letter_audio = new Audio(require(`./audio/${letter}_sound.m4a`));
     letter_audio.play();
-    this.setState({
-      letter_state: letter_clicked,
-    });
   }
 
   render() {
