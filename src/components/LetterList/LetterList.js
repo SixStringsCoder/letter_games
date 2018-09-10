@@ -5,7 +5,6 @@ import Letter from '../Letter/Letter';
 
 
 export const LetterList = props => {
-  console.log(props);
     return (
       <section className="letterList">
         {

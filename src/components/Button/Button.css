@@ -1,0 +1,24 @@
+.menu-button {
+  background-color: #0002ff;
+  border: 1px solid #0002cc;
+  color: white;
+  border-radius: 15px;
+  margin: 3vw 2vw;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-button:active {
+  color: black;
+  background-color: #009cff;;
+}
+
+.btn-text {
+  font-family: 'Short Stack', cursive;
+  font-size: 4vw;
+  text-align: center;
+  min-width: 100%;
+  padding: 8px 8px;
+}

@@ -36,6 +36,7 @@ class Gameboard extends Component {
             <GamePicker chooseContent={this.chooseContent}/>
             <LetterList content={this.state.content} />
           </section>
+          <hr />
         </main>
     );
   }
