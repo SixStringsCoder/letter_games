@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
 import './Button.css';
 
-export const Button = props => {
+class Button extends Component {
+
+  handleClick = (event) => {
+    console.log(event.target.id)
+    this.props.chooseWebpage(event.target.id);
+  }
+
+  render() {
     return (
       <div class="btn_container">
-        <button className="menu-button" id={props.button}>
-          <span className="btn-text">{props.button}</span>
+        <button onClick={this.handleClick} className="menu-button btn-text" id={this.props.button}>
+          {this.props.button}
         </button>
       </div>
-    );
+    )
+  }
 }
+
+export default Button;
