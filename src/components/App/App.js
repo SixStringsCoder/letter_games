@@ -25,6 +25,7 @@ class App extends Component {
   chooseWebpage = (pageName) => {
     this.setState({
       webpageContent: pageName.toLowerCase(),
+      buttonSet: pageName != "Home" ? "music_practice" : "home",
     });
   }
 
