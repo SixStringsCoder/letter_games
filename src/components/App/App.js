@@ -8,9 +8,7 @@ import { Footer } from '../Footer/Footer';
 
 const BUTTON_MENU = {
   home: ["Home", "Vowels", "Consonants", "Letters", "Words", "Games", "?"],
-  music_practice: ["Sing", "Touch", "Rhythm", "Copycat", "Jam"],
   challenges: ["Listen & Touch", "Drag & Drop", "Match", "Word Builder"],
-  audio_player: ["Play/Pause", "Stop/Rewind"]
 }
 
 class App extends Component {
@@ -18,19 +16,17 @@ class App extends Component {
     super(props);
     this.state = {
       webpageContent: "letters",
-      buttonSet: "home"
+      buttonSet: 'home',
     }
   }
 
   chooseWebpage = (pageName) => {
     this.setState({
       webpageContent: pageName.toLowerCase(),
-      buttonSet: pageName != "Home" ? "music_practice" : "home",
     });
   }
 
   render() {
-
     return (
       <div id="appContainer">
         <Header />

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './ButtonBoard.css';
 import Button from '../Button/Button';
+import AudioPlayer from '../AudioPlayer/AudioPlayer';
 
 
 class ButtonBoard extends Component {

@@ -4,7 +4,7 @@ import './Button.css';
 class Button extends Component {
 
   handleClick = (event) => {
-    console.log(event.target.id)
+    console.log(`${event.target.id} button clicked`)
     this.props.chooseWebpage(event.target.id);
   }
 

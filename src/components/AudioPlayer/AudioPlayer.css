@@ -1,0 +1,34 @@
+#audioPlayer {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1vh;
+}
+
+.audioBtn {
+  border: 1px solid black;
+  padding: 2vw;
+}
+
+
+
+/*========================
+--------------------------
+      MEDIA QUERIES
+--------------------------
+=========================*/
+
+/* Tablets - target is Portrait mode */
+@media screen and (min-width: 47.9375rem) {
+
+}
+
+@media screen and (min-width: 63.9375rem) {
+
+}
+
+
+/* Desktops */
+@media screen and (min-width: 75rem) {
+
+}

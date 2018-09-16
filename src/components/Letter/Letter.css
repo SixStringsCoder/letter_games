@@ -22,3 +22,16 @@ a {
   min-width: 100%;
   padding: 15px 15px;
 }
+
+.button #a, .button #e, .button #i, .button #o, .button #u {
+  background-color: #ffeb3b;
+  border: 1px solid black;
+  border-radius: 100%;
+  margin: 1.5vw 1.4vw;
+  width: 12vw;
+  height: 12vw;
+  padding: 15px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
