@@ -1,35 +1,43 @@
 import React, { Component } from 'react';
 import './AudioPlayer.css';
-import App from '../App/App';
-import Gameboard from '../Gameboard/Gameboard';
 
 
 class AudioPlayer extends Component {
-  state = {
-      isPlaying: false,
-  }
+  constructor(props) {
+    super(props);
+    this.state = {
+        isPlaying: false,
+        musicPath: new Audio(''),
+    }
 
-  playMusic = () => {
-    let contentAudio = this.props.audioFolder
-    let music_audio = new Audio(require(`./audio/${contentAudio}/${contentAudio}_${this.props.track}.ogg`));
-    music_audio.play();
+    this.togglePlayPause = this.togglePlayPause.bind(this);
+ }
 
+ loadAudio = () => {
+   console.log(this.props.trackUrl);
+   let audioURL = this.props.trackUrl;
+   this.setState({
+       musicPath: new Audio(audioURL)
+   });
+ }
+
+  togglePlayPause = () => {
     this.setState({
-      isPlaying: true
-    })
+        isPlaying: !this.state.isPlaying,
+    }, () => {
+      this.state.isPlaying ? this.state.musicPath.play() : this.state.musicPath.pause();
+    });
   }
 
   render() {
 
     return (
       <div id="audioPlayer">
-        <button className="audioBtn" onClick={this.playMusic} id="playBtn">
-          {!this.state.isPlaying ?
-            "Play"
-            :
-            "Pause"
-          }
+        <button className="audioBtn" onClick={this.togglePlayPause} id="playBtn">
+          {this.state.isPlaying ? "Pause" : "Play"}
         </button>
+        <button className="audioBtn" onClick={this.loadAudio} id="loadAudio">Load Audio</button>
+
         <button className="audioBtn" id="stopRewindBtn">Stop/Rewind</button>
       </div>
     );
