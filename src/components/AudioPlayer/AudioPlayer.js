@@ -7,38 +7,34 @@ class AudioPlayer extends Component {
     super(props);
     this.state = {
         isPlaying: false,
-        musicPath: new Audio(''),
     }
 
     this.togglePlayPause = this.togglePlayPause.bind(this);
  }
 
- loadAudio = () => {
-   console.log(this.props.trackUrl);
-   let audioURL = this.props.trackUrl;
-   this.setState({
-       musicPath: new Audio(audioURL)
-   });
+ rewindAudio = () => {
+   const audio = this.props.music;
+   audio.currentTime -= 5;
+   console.log(audio.currentTime);
  }
 
   togglePlayPause = () => {
+    console.log(this.props.music)
     this.setState({
         isPlaying: !this.state.isPlaying,
     }, () => {
-      this.state.isPlaying ? this.state.musicPath.play() : this.state.musicPath.pause();
+      this.state.isPlaying ? this.props.music.play() : this.props.music.pause();
     });
   }
 
   render() {
-
     return (
       <div id="audioPlayer">
-        <button className="audioBtn" onClick={this.togglePlayPause} id="playBtn">
-          {this.state.isPlaying ? "Pause" : "Play"}
+        <button onClick={this.togglePlayPause} className="audioBtn" id="playBtn">
+          {this.state.isPlaying ? "Pause ⏸" : "Play ▶"}
         </button>
-        <button className="audioBtn" onClick={this.loadAudio} id="loadAudio">Load Audio</button>
 
-        <button className="audioBtn" id="stopRewindBtn">Stop/Rewind</button>
+        <button onClick={this.rewindAudio} className="audioBtn" id="stopRewindBtn">◀ Rewind 5</button>
       </div>
     );
   }
