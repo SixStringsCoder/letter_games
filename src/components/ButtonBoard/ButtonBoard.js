@@ -11,6 +11,7 @@ class ButtonBoard extends Component {
   render() {
     return (
       <section className="buttonPanel">
+
         {
           this.props.buttons.map((button, index) => {
             return <Button chooseWebpage={this.props.chooseWebpage}

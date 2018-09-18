@@ -2,7 +2,7 @@
   max-width: 100vw;
   min-height: 100vh;
   display: grid;
-  grid-template: 12vh auto auto 8vh / repeat(3, 1fr);
+  grid-template: 12vh 100% 30vh 8vh / repeat(3, 1fr);
   grid-template-areas:
   "header header header"
   "main main main"

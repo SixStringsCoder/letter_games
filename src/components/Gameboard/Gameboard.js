@@ -37,7 +37,6 @@ class Gameboard extends Component {
             <AudioPicker audioFolder={this.props.pageContent} />
             <LetterList content={CONTENT[this.props.pageContent]} />
           </section>
-          <hr />
         </main>
     );
   }
