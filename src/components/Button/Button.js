@@ -5,6 +5,7 @@ class Button extends Component {
 
   handleClick = (event) => {
     this.props.chooseWebpage(event.target.id);
+    console.log(event.target.id);
   }
 
   render() {

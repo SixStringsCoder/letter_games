@@ -21,7 +21,7 @@ class AudioPicker extends Component {
     return (
       <section id="audiopicker">
         <div id="menu-container">
-          <label>Pick Your 🎶</label>
+          <label>Pick Your <span role="img">🎶</span></label>
             <select onChange={this.handleChange} id="menu" name="content-menu" autoFocus>
               <option disabled selected>Menu</option>
               <option value="sing">Sing</option>

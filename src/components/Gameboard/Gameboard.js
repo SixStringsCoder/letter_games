@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Gameboard.css';
 import AudioPicker from '../AudioPicker/AudioPicker';
-import { LetterList } from '../LetterList/LetterList';
+import LetterList from '../LetterList/LetterList';
 
 /*============================================
                   CONTENT

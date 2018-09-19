@@ -7,6 +7,8 @@ class Letter extends Component {
     let letter = event.target.id;
     let letter_audio = new Audio(require(`./audio/${letter}_sound.m4a`));
     letter_audio.play();
+
+    this.props.letter2Word(letter);
   }
 
   render() {
