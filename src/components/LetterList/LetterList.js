@@ -3,16 +3,27 @@ import './LetterList.css';
 import Letter from '../Letter/Letter';
 import { Words } from '../Words/Words';
 
+let wordStorage = [];
 
 class LetterList extends Component {
 
   state = {
-    letterClicked: '',
+    letters2Word: '',
   }
 
   letter2Word = (letter) => {
+    wordStorage.push(letter);
+    let word = wordStorage.join('');
     this.setState({
-      letterClicked: letter
+      letters2Word: word,
+    });
+  }
+
+  clearWordBox = () => {
+    // empty word storage array
+    wordStorage.splice(0, wordStorage.length);
+    this.setState({
+      letters2Word: '',
     });
   }
 
@@ -21,8 +32,9 @@ class LetterList extends Component {
       <div>
         <section className="wordsArea">
           <div className="wordBox">
-            <Words wordLetter={this.state.letterClicked} />
+            <Words letters2Word={this.state.letters2Word} />
           </div>
+          <button id="clearWordBtn" onClick={this.clearWordBox}>&#x02297;</button>
         </section>
 
         <section className="letterList">
