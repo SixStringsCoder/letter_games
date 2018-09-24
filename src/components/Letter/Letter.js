@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Letter.css';
 
 class Letter extends Component {
@@ -21,3 +22,8 @@ class Letter extends Component {
 }
 
 export default Letter;
+
+Letter.propTypes = {
+  playAudio: PropTypes.func.isRequired,
+  letter2Word: PropTypes.func.isRequired,
+}

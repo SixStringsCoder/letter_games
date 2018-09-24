@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './ButtonBoard.css';
 import Button from '../Button/Button';
 
@@ -26,3 +27,7 @@ class ButtonBoard extends Component {
 }
 
 export default ButtonBoard;
+
+ButtonBoard.propTypes = {
+  chooseWebpage: PropTypes.func.isRequired,
+}

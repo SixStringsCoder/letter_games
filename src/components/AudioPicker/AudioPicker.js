@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './AudioPicker.css';
 import AudioPlayer from '../AudioPlayer/AudioPlayer';
 
@@ -23,7 +24,7 @@ class AudioPicker extends Component {
         <div id="menu-container">
           <label>Pick Your <span role="img">🎶</span></label>
             <select onChange={this.handleChange} id="menu" name="content-menu" autoFocus>
-              <option disabled selected>Menu</option>
+              <option disabled selected>Music Menu</option>
               <option value="sing">Sing</option>
               <option value="touch">Touch</option>
               <option value="rhythm">Rhythm</option>
@@ -38,3 +39,8 @@ class AudioPicker extends Component {
 }
 
 export default AudioPicker;
+
+AudioPicker.propTypes = {
+  track: PropTypes.string,
+  music: PropTypes.object,
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './LetterList.css';
 import Letter from '../Letter/Letter';
 import { Words } from '../Words/Words';
@@ -40,7 +41,11 @@ class LetterList extends Component {
         <section className="letterList">
           {
             this.props.content.map(letter => {
-              return <Letter letter2Word={this.letter2Word} letter={letter} key={letter} />
+              return <Letter
+                        letter2Word={this.letter2Word}
+                        letter={letter}
+                        key={letter}
+                        />
             })
           }
         </section>
@@ -50,3 +55,9 @@ class LetterList extends Component {
 }
 
 export default LetterList;
+
+LetterList.propTypes = {
+  letters2Word: PropTypes.string,
+  clearWordBox: PropTypes.func,
+  letter2Word: PropTypes.func,
+}

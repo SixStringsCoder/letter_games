@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './AudioPlayer.css';
 
 
@@ -6,9 +7,8 @@ class AudioPlayer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        isPlaying: false,
+      isPlaying: false,
     }
-
     this.togglePlayPause = this.togglePlayPause.bind(this);
  }
 
@@ -41,3 +41,8 @@ class AudioPlayer extends Component {
 }
 
 export default AudioPlayer;
+
+AudioPlayer.propTypes = {
+  togglePlayPause: PropTypes.func,
+  isPlaying: PropTypes.bool,
+}

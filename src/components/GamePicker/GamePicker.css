@@ -1,0 +1,26 @@
+#gamepicker {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1vh 0;
+  padding-bottom: 2vh;
+}
+
+#menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+label {
+  font-size: 1.2rem;
+  margin: 0
+}
+#menu {
+  font-size: 1.2rem;
+  margin: 5px;
+  border: 1px solid black;
+}

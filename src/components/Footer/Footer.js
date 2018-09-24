@@ -4,7 +4,7 @@ import './Footer.css';
 export const Footer = props => {
     return (
       <footer>
-        <p id="copyright">&copy;2018SteveHanlon</p>
+        <p id="copyright">2018 &copy; SteveHanlon</p>
       </footer>
     );
 }

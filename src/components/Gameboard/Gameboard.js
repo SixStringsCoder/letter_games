@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Gameboard.css';
 import AudioPicker from '../AudioPicker/AudioPicker';
+import GamePicker from '../GamePicker/GamePicker';
 import LetterList from '../LetterList/LetterList';
 
 /*============================================
@@ -29,12 +31,12 @@ class Gameboard extends Component {
     }
   }
 
-
   render() {
     return (
         <main>
           <section id="gameboard">
             <AudioPicker audioFolder={this.props.pageContent} />
+            <GamePicker />
             <LetterList content={CONTENT[this.props.pageContent]} />
           </section>
         </main>
@@ -43,3 +45,7 @@ class Gameboard extends Component {
 }
 
 export default Gameboard;
+
+Gameboard.propTypes = {
+  pageContent: PropTypes.string.isRequired,
+}

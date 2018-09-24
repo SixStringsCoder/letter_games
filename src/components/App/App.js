@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './App.css';
 import { Header } from '../Header/Header';
 import ButtonBoard from '../ButtonBoard/ButtonBoard';
@@ -7,8 +8,7 @@ import { Footer } from '../Footer/Footer';
 
 
 const BUTTON_MENU = {
-  home: ["Home", "Vowels", "Consonants", "Letters", "Words", "Games", "?"],
-  challenges: ["Listen & Touch", "Drag & Drop", "Match", "Word Builder"],
+  home: ["Home", "Vowels", "Consonants", "Letters", "Words",]
 }
 
 class App extends Component {
@@ -43,3 +43,9 @@ class App extends Component {
 }
 
 export default App;
+
+App.propTypes = {
+  pageContent: PropTypes.string,
+  chooseWebpage: PropTypes.func,
+  buttons: PropTypes.string
+}
